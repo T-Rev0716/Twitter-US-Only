@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "X US-Only Feed Filter",
+  "version": "1.0.0",
+  "description": "Hides posts on X/Twitter from accounts not based in the United States, with an optional filter for AI-sounding text.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*",
+        "https://mobile.x.com/*",
+        "https://mobile.twitter.com/*"
+      ],
+      "js": ["twitter-us-only.user.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
